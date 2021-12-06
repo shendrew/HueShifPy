@@ -11,7 +11,7 @@ def ColourShift(hue, saturation, value, numLight=2, numDark=2):
     vShift = 16
     direction=1
     if hue<60 or hue>240:
-        direction=-1a
+        direction=-1
 
     def hsv2hex(h, s, v):
         rgbColour = tuple(round(i * 255) for i in colorsys.hsv_to_rgb(h/360,s/100,v/100))
@@ -53,7 +53,7 @@ def ColourShift(hue, saturation, value, numLight=2, numDark=2):
     return palette
 
 print('Please input a set of valid HSV values:')
-print('(e.g.) 120 60 70')
+print('(eg.) 120 60 70')
 inputValues=input().split()
 
 colourPalette=ColourShift(inputValues[0], inputValues[1], inputValues[2])
